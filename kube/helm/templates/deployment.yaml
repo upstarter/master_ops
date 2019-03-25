@@ -79,7 +79,7 @@ metadata:
         {{- end }}
       {{- if .Values.lifecycle }}
         lifecycle:
-{{ toYaml .Values.lifecycle | indet 12 }}
+{{ toYaml .Values.lifecycle | indent 12 }}
       {{- end }}
       {{- if or (.Values.livenessProbe.commands) (.Values.livenessProbe.path) }}
         livenessProbe:
